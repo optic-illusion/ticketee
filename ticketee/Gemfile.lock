@@ -61,7 +61,10 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    ffi (1.1.0)
     ffi (1.1.0-x86-mingw32)
+    gherkin (2.11.1)
+      json (>= 1.4.6)
     gherkin (2.11.1-x86-mingw32)
       json (>= 1.4.6)
     hike (1.2.1)
@@ -79,6 +82,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.3.6)
+    nokogiri (1.5.5)
     nokogiri (1.5.5-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -149,6 +153,7 @@ GEM
       nokogiri (~> 1.3)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
