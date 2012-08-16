@@ -16,8 +16,12 @@ When /^I press "(.*?)"$/ do |link|
   click_button link # express the regexp above with the code you wish you had
 end
 
-Then /^I should see "(.*?)"$/ do |content|
-  assert page.has_content?(content) # express the regexp above with the code you wish you had
+Then /^I should (not )?see "(.*?)"$/ do |not_see, content|
+  if not_see
+    page.should_not have_content(content)
+  else
+    page.should have_content(content)
+  end
 end
 
 Then /^I should be on the project page for "([^\"]*)"$/ do |page_name|
