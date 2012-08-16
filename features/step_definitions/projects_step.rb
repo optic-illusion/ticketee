@@ -28,3 +28,7 @@ Then /^I should be on the project page for "([^\"]*)"$/ do |page_name|
     assert_equal project_path(Project.find_by_name!(page_name)), current_path
   end
 end
+
+Given /^there is a project called "(.*?)"$/ do |project_name|
+  Factory(:project, :name => project_name)
+end
