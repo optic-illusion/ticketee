@@ -1,5 +1,4 @@
 - title(@project.name, "Projects")
 %h2= @project.name
-= link_to "Edit Project", edit_project_path(@project.id)
-%br
+= render "form"
 = link_to "Back to Projects List", projects_path
