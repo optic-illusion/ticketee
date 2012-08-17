@@ -1,7 +1,11 @@
 - title(@project.name, "Projects")
 %h2= @project.name
+%hr
 = link_to "Edit Project", edit_project_path(@project.id)
 %br
 = link_to "Delete Project", @project, :method => :delete, :data => {:confirm => "Are you sure you want to dleete this project?"}
+%br
+%hr
+= link_to "New Ticket", new_project_ticket_path(@project)
 %br
 = link_to "Back to Projects List", projects_path
