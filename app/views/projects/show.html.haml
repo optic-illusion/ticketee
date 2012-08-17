@@ -1,5 +1,9 @@
 - title(@project.name, "Projects")
 %h2= @project.name
+%ul{:id=>"tickets"}
+  - @project.tickets.each do |ticket|
+    %li
+      != ([ticket.id] << link_to(ticket.title, [@project, ticket])).join(" - ")
 %hr
 = link_to "Edit Project", edit_project_path(@project.id)
 %br

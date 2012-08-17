@@ -16,7 +16,7 @@ When /^I press "(.*?)"$/ do |link|
   click_button link # express the regexp above with the code you wish you had
 end
 
-Then /^I should (not )?see "(.*?)"$/ do |not_see, content|
+Then /^I should (not )?see "([^"]*?)"$/ do |not_see, content|
   if not_see
     page.should_not have_content(content)
   else
@@ -34,5 +34,5 @@ Then /^I should be on the project page for "([^\"]*)"$/ do |page_name|
 end
 
 Given /^there is a project called "(.*?)"$/ do |project_name|
-  Factory(:project, :name => project_name)
+  @project = Factory(:project, :name => project_name)
 end
